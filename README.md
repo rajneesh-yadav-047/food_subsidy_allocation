@@ -12,9 +12,9 @@ This project tackles this problem using a two-part quantitative model:
 
 1.  **Threshold Calculation (`calculate_thresholds.py`):** Establishes a monetary threshold for "food adequacy" based on the cost of a representative food basket. It calculates separate thresholds for rural and urban areas to account for price disparities.
 
-2.  **Subsidy Optimization (`optim proj.py`):** Uses these thresholds in a stochastic optimization model. The model allocates a fixed budget across various population fractiles (grouped by expenditure) to minimize the total *weighted expected squared shortfall* in food consumption. This approach prioritizes more vulnerable groups and accounts for potential price volatility.
+2.  **Subsidy Optimization (`final subsidy vs mpce.py`):** Uses these thresholds in a stochastic optimization model. The model allocates a fixed budget across various population fractiles (grouped by expenditure) to minimize the total *weighted expected squared shortfall* in food consumption. This approach prioritizes more vulnerable groups and accounts for potential price volatility.
 
-The final output is a detailed, optimized allocation of subsidies and interactive visualizations showing the impact of the targeted aid.
+The project outputs a detailed, optimized allocation of subsidies and interactive visualizations showing the allocation and its impact on reducing food consumption shortfalls.
 
 ### Key Features
 
@@ -89,17 +89,18 @@ FINAL CALCULATED THRESHOLDS:
 
 ### Step 2: Run the Subsidy Optimization
 
-Once you have your thresholds, manually update them in `optim proj.py`. Then, run the script to perform the optimization.
+Once you have your thresholds, manually update them in `final subsidy vs mpce.py`. Then, run the script to perform the optimization and visualize the allocation.
 
 ```python
-# In optim proj.py, update these values with the output from Step 1
+# In final subsidy vs mpce.py, update these values with the output from Step 1
 RURAL_THRESHOLD = 1891
 URBAN_THRESHOLD = 2078
 ```
 
 Execute the script:
 ```sh
-python "optim proj.py"
+python "final subsidy vs mpce.py"
+python "final befor vs after.py"
 ```
 
 The script will run the optimization and automatically open two interactive HTML plots in your browser:
