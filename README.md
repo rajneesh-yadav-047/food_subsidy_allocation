@@ -109,15 +109,6 @@ The script will run the optimization and automatically open two interactive HTML
 
 A detailed table of the final allocation will also be printed to the console.
 
-## Roadmap
-
-*   [ ] Create a `requirements.txt` file for easier dependency management.
-*   [ ] Integrate the two scripts, allowing `optim proj.py` to consume the output of `calculate_thresholds.py` directly.
-*   [ ] Move hardcoded data (e.g., MPCE, prices, household sizes) to external CSV or JSON files for easier modification.
-*   [ ] Develop a simple web interface (e.g., with Streamlit or Dash) to allow users to adjust parameters and see results without editing code.
-
-See the open issues for a full list of proposed features (and known issues).
-
 ## Contributing
 
 Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
